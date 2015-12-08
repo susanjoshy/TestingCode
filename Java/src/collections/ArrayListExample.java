@@ -17,10 +17,13 @@ public static void main(String[] args) {
 	//retrieve elements
 	for(int i=0;i<l.size();i++)
 	System.out.println(l.get(i));
-	
+	//retrieve list elements 
+	System.out.println("list is"+l);
 	//for each loop to retrieve  collection objects
+	
 	for(String s:l){
 		System.out.println(s);
+		
 		//to come out of for loop
 		if(s.equals("Thomas")){
 			break;

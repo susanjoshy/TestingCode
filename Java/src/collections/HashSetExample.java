@@ -1,12 +1,14 @@
 package collections;
 
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class HashSetExample {
 
 	public static void main(String[] args) {
 		
-		
+		//no insertion order for set,no duplicates
 		HashSet<String> hset=new HashSet<>();
 		hset.add("susan");
 		hset.add("Thomas");
@@ -19,10 +21,14 @@ public class HashSetExample {
 			System.out.println(s);
 			
 		}
-//	Iterator<String> it=hset.iterator();
-//	while(it.hasNext()){
-//	System.out.println(it.next());
-//	}
+		System.out.println("Print using Iterator");
+	Iterator<String> it=hset.iterator();
+	while(it.hasNext()){
+	System.out.println(it.next());
+	}
+		
+		
+		
 		
 
 }

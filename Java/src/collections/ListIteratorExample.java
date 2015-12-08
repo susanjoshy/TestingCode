@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.ListIterator;
 
 public class ListIteratorExample {
+	
 	static void accessElements(ArrayList<String> l){
 		ListIterator<String> li=l.listIterator();
 		while(li.hasNext())
