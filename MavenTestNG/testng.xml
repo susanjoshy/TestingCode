@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EbaySuite" parallel="none">
+    
+    <test name= "ipadtest">
+        <parameter name="searchKey" value="ipad"></parameter>
+        <parameter name="noOfProducts" value="5"></parameter>
+        <classes>
+            
+            <class name ="TestNGParameter.MavenTestNG.EbayProductsTest"/>
+                
+           
+        </classes>
+    </test>
+</suite>
+
+
