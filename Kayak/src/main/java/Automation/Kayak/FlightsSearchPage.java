@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-public class KayakFlightsPage extends KayakHomePage{
+public class FlightsSearchPage extends HomePage{
 	WebDriver driver;
 	private  static final By flink=By.cssSelector("#flights-link");
 	
@@ -18,11 +18,12 @@ public class KayakFlightsPage extends KayakHomePage{
 	private static final By startDate=By.cssSelector("#travel_dates-start-display");
 	private static final By returnDate=By.cssSelector("#travel_dates-end-display");
 	private static final By submit=By.cssSelector("#fdimgbutton");
-	private static final By originText=By.xpath("//div[1]/div/div[1]/div/div/div/div[2]/div[1]/div[1]/div[1]/span[1]");
-	private static final By destText=By.xpath("//div[3]/div[1]/div/div[1]/div/div/div/div[2]/div[1]");
 	
 	
-	public KayakFlightsPage(WebDriver driver){
+	
+	
+	
+	public FlightsSearchPage(WebDriver driver){
 		super(driver);
 		
 	}
@@ -33,7 +34,7 @@ public class KayakFlightsPage extends KayakHomePage{
 		
 		
 	}
-	public void  searchFlight(String originValue,String destValue){
+	public FlighDetailsPage  searchFlight(String originValue,String destValue){
 		
 		boolean nearbyOrigindisplayed=false;
 		boolean nearbyDestDisplayed=false;
@@ -55,22 +56,10 @@ public class KayakFlightsPage extends KayakHomePage{
 	driver.findElement(returnDate).sendKeys("7/21/16");
 	
 	driver.findElement(submit).click();
+	return new FlighDetailsPage(driver);
 	
 	}	
 	
-	public String  searchOrigin(){
-	String origin=driver.findElement(originText).getText();
-	return origin;
-	}
-	public String searchDest(){
-		
-	String dest=driver.findElement(destText).getText();
-	return dest;		
-			
-			
-			
-			
-			
-	}		
+	
 
 }

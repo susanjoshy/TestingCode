@@ -6,15 +6,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class KayakHomePageTest {
+public class HomePageTest {
 	
 	WebDriver driver;
-	KayakHomePage hPage;
+	HomePage hPage;
 	@BeforeClass
 	public void init(){
 		driver=new FirefoxDriver();
 		
-		hPage = new KayakHomePage(driver);
+		hPage = new HomePage(driver);
 		
 	}
 	@Test
