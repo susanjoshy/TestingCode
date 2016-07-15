@@ -34,7 +34,7 @@ public class FlightsSearchPage extends HomePage{
 		
 		
 	}
-	public FlighDetailsPage  searchFlight(String originValue,String destValue){
+	public FlightDetailsPage  searchFlight(String originValue,String destValue){
 		
 		boolean nearbyOrigindisplayed=false;
 		boolean nearbyDestDisplayed=false;
@@ -56,7 +56,7 @@ public class FlightsSearchPage extends HomePage{
 	driver.findElement(returnDate).sendKeys("7/21/16");
 	
 	driver.findElement(submit).click();
-	return new FlighDetailsPage(driver);
+	return new FlightDetailsPage(driver);
 	
 	}	
 	

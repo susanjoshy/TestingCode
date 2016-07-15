@@ -23,7 +23,7 @@ WebDriver driver;
 	public void init(){
 		driver=new FirefoxDriver();
 		
-		hPage=new HomePage(driver);
+		
 		hPage.openKayakHomePage();
 		
 		
@@ -40,10 +40,10 @@ WebDriver driver;
 	@Test()
 	public void testFlight(String origin,String dest){
     	
-    	FlighDetailsPage flightDetailsPage=flightPage.searchFlight(origin,dest);
+    	FlightDetailsPage flightDetailsPage=flightPage.searchFlight(origin,dest);
 		
 			String expectedOrigin=origin;
-			String actualOrigin=flightDetailsPage.searchOrigin();
+			String actualOrigin=flightDetailsPage.getOrigin();
 			assertEquals(actualOrigin,expectedOrigin);
 			
 		
@@ -51,7 +51,7 @@ WebDriver driver;
 		
 	
 			String expectedDest=dest;
-			String actualDest=flightDetailsPage.searchDest();
+			String actualDest=flightDetailsPage.getDest();
 			assertEquals(actualDest,expectedDest);
 			
 		}
